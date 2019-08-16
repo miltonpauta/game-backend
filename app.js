@@ -9,6 +9,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended:false})); 
 app.use(bodyParser.json());
 
+app.use('/', ()=>{
+    console.log('route hit')
+})
 
 //catch all errors that head to unexisting routes 
 app.use((req, res, next)=>{
